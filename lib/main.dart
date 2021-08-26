@@ -81,10 +81,10 @@ class _HomeMeuPerfilState extends State<HomeMeuPerfil> {
 
 
 showContacts(String texto, IconData xicone, double szfonte, Color bgcolor, Color fontcor) {
-    return Container(
+    return Card(
       color: bgcolor,
       margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-      padding: EdgeInsets.all(10),
+  
       child: Row(
         children: [
           Icon(
