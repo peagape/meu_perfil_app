@@ -1,6 +1,8 @@
 # meu_perfil_app
 
-A new Flutter project.
+Meu "primeiro" app em Flutter. Estou estudando com videos e usando a própria doc.
+
+<img src='https://raw.githubusercontent.com/peagape/meu_perfil_app/master/Screenshot_1630270070.png'>
 
 ## Getting Started
 
