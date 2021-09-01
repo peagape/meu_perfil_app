@@ -34,8 +34,8 @@ class Cardsmenu {
             onTap: () => {
 
                print('Item Clikado'),
-               
-               if (_urli != '') { _launchURL(_urli), }
+            
+               _urli != '' ? _launchURL(_urli) : throw 'A Url não foi passada!',
               //Navigator.pushNamed(context, "myRoute");
              
             },

@@ -37,8 +37,8 @@ class _HomeMeuPerfilState extends State<HomeMeuPerfil> {
    bgcolor: Colors.white, fontcor: Colors.black87),
   ];
   */
-  @override
-  Widget build(BuildContext context) {
+@override
+Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 13, 17, 55),
       body: SafeArea(
