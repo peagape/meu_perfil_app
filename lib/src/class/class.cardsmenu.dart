@@ -9,55 +9,46 @@ class Cardsmenu {
   Color? bgcolor;
   Color? fontcor;
 
-
   Cardsmenu(
       {this.texto, this.xicone, this.szfonte, this.bgcolor, this.fontcor});
 
-
-  show(_urli){
- 
-    return Container(
+  show(_urli) {
+    return Card(
       color: this.bgcolor,
       margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
-      padding: EdgeInsets.all(10),
-      child: Row(
-        children: [
-          Icon(
+      child: Padding(
+        padding: const EdgeInsets.all(0.1),
+        child: ListTile(
+          
+          leading: Icon(
             this.xicone,
             size: 25,
             color: Color.fromARGB(255, 13, 17, 55),
           ),
-          SizedBox(
-            width: 10.0,
+          
+          title: Text(
+            '$texto',
+            style: GoogleFonts.openSans(
+                fontStyle: FontStyle.normal,
+                color: this.fontcor,
+                fontSize: this.szfonte,
+                letterSpacing: 1.0),
           ),
-          GestureDetector(
-            onTap: () => {
 
-               print('Item Clikado'),
-            
-               _urli != '' ? _launchURL(_urli) : throw 'A Url não foi passada!',
-              //Navigator.pushNamed(context, "myRoute");
-             
-            },
-            child: Text(
-              '$texto',
-              style: GoogleFonts.openSans(
-                  fontStyle: FontStyle.normal,
-                  color: this.fontcor,
-                  fontSize: this.szfonte,
-                  letterSpacing: 1.0),
-            ),
-          ),
-        ],
+          onTap: () => {
+            print('Item Clikado'),
+            _urli != '' ? _launchURL(_urli) : print('A Url não foi passada!'),
+            //Navigator.pushNamed(context, "myRoute");
+          },
+
+        ),
       ),
     );
-
   }
 
-
-void _launchURL(_url) async =>
-    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-
+  void _launchURL(_url) async => await canLaunch(_url)
+      ? await launch(_url)
+      : throw 'Could not launch $_url';
 }
 
 //Cardsmenu meusCards = Cardsmenu(texto: 'flaviorocha.dev@gmail.com',xicone: Icons.mail,szfonte: 16.0,

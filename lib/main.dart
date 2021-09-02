@@ -46,7 +46,7 @@ Widget build(BuildContext context) {
           children: 
             [
               Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(50.0),
@@ -71,11 +71,14 @@ Widget build(BuildContext context) {
                       letterSpacing: 2.0),
                 ),
                 SizedBox(
-                  //width: 100, height: 2,
-                  child: Container(
-                    height: 2,
-                    color: Colors.white12,
-                    margin: EdgeInsets.all(20),
+                  //width: 250, 
+                  height: 50.0,
+                  child: Divider(
+                  
+                    color: Colors.white60,
+                    thickness: 2,
+                    indent: 50,
+                    endIndent: 50,
                   ),
                 ),
         
